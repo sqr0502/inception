@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-body{
+
+.container {
+  margin: 3% 0 0 0;
+}
+
+input {
+  text-transform: uppercase;
+  background-color: #E4FDE1;
+}
+
+form {
+  background-color: #456990;
+}
+
+.form {
+  padding: 1%;
   font-family: 'Museo Sans';
+}
+
+.btn{
+  border-radius: 0 !important;
+  background-color: #F45B69 !important;
 }

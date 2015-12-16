@@ -13,4 +13,11 @@
  *= require_tree .
  *= require_self
  */
- @import "materialize";
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ body{
+   font-family: 'Museo Sans';
+   background-color: #114B5F;
+ }
