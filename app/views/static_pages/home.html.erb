@@ -1,8 +1,25 @@
 <div class="container">
   <div class="row">
-    <h1>FORM Survey</h1>
-    <form class="" action="index.html" method="post">
-      <input type="text" name="name" value="">
+    <form class="col s12" action="index.html" method="post">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="FULL NAME" id="first_name" type="text" class="validate">
+          <label for="first_name"></label>
+        </div>
+        <div class="input-field col s12">
+         <input id="email" placeholder="EMAIL" type="email" class="validate">
+         <label for="email" data-error="wrong" data-success="right"></label>
+       </div>
+       <div class="input-field col s12">
+         <input placeholder="PROJECT REPO" id="project_repo" type="text" class="validate">
+         <label for="project_repo"></label>
+       </div>
+       <div class="input-field col s12">
+         <input placeholder="PROJECT URL" id="project_url" type="url" class="validate">
+         <label for="project_url"></label>
+       </div>
+      </div>
+      <a class="waves-effect waves-light btn">SUBMIT</a>
     </form>
   </div>
 
