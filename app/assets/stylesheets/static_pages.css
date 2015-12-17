@@ -7,10 +7,7 @@
   margin: 3% 0 0 0;
 }
 
-input {
-  text-transform: uppercase;
-  background-color: #E4FDE1;
-}
+/* form*/
 
 form {
   background-color: #456990;
@@ -21,7 +18,54 @@ form {
   font-family: 'Museo Sans';
 }
 
-.btn{
+
+.form-control{
   border-radius: 0 !important;
-  background-color: #F45B69 !important;
+  background-color: #E4FDE1 !important;
+
+}
+
+
+.form-group{
+  padding: 0 3% 0 3%;
+}
+
+
+/* placeholder*/
+input {
+  font-family: 'Raleway', sans-serif !important;
+  text-transform: uppercase;
+
+
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #456990 !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #456990;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #456990;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #456990;
+}
+
+
+input placeholder {
+  color:  !important;
+
+}
+
+
+
+
+button.form-control.btn.btn-default {
+    background-color: #F45B69 !important;
+    border-radius: 0 !important;
+    border: none;
+
 }
