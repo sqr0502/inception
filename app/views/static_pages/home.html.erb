@@ -1,24 +1,39 @@
-<div class="container">
+<div class="container" ng-app="inception" ng-controller="formController">
   <div class="row">
 
-    <form class="form col-sm-12" action="index.html" method="post">
+    <form class="form col-sm-12 col-md-6 col-md-offset-3">
       <div class="row">
 
-        <div class="form-group col-sm-12 col-md-6 col-md-offset-5">
-          <input placeholder="full name" id="full_name" type="text" class="validate">
+        <div class="form-group col-sm-12 col-md-12">
+          <input ng-model="user.full_name" class="form-control" placeholder="full name" id="full_name" type="text" class="validate">
         </div>
 
-        <div class="form-group col-sm-12 col-md-6 col-md-offset-5">
-         <input id="email" placeholder="email" type="email" class="validate">
+        <div class="form-group col-sm-12 col-md-12">
+         <input ng-model="user.email" class="form-control" id="email" placeholder="email" type="email" class="validate">
        </div>
 
-       <div class="form-group col-sm-12 col-md-6 col-md-offset-5">
-         <input placeholder="project repo" id="project_repo" type="text" class="validate">
+       <div class="form-group col-sm-12 col-md-12">
+         <input ng-model="user.project_repo" class="form-control" placeholder="project repo" id="project_repo" type="text" class="validate">
        </div>
 
-       <div class="form-group col-sm-12 col-md-6 col-md-offset-5">
-         <input placeholder="project url" id="project_url" type="url" class="validate">
-         <button type="submit" class="btn btn-default">SUBMIT</button>
+       <div class="form-group col-sm-12 col-md-12">
+         <input ng-model="user.project_url" class="form-control" placeholder="project url" id="project_url" type="text" class="validate">
+       </div>
+
+      <!-- ratings  -->
+      <div class="form-group col-sm-12 col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <span>MODULAR DEVELOPMENT</span>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" placeholder="8" id="" type="number" class="validate">
+          </div>
+        </div>
+      </div>
+
+       <div class="form-group col-sm-12 col-md-12">
+         <button class="form-control btn btn-default" ng-click="addUser()" >SUBMIT</button>
        </div>
 
 
@@ -28,5 +43,6 @@
   </div>
 </div>
 
+<!--
 <script src="https://use.typekit.net/tmb8zzs.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script> -->
