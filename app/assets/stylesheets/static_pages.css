@@ -10,30 +10,39 @@
 /* form*/
 
 form {
+  color: #E4FDE1 ;
   background-color: #456990;
+
+  /*font-family: 'Raleway', sans-serif !important;*/
+
 }
 
 .form {
-  padding: 1%;
-  font-family: 'Museo Sans';
+  padding: 3% 3% 0 3% !important;
+  font-weight: 500;
 }
 
 
 .form-control{
+  height: 45px !important;
+  color: #456990;
   border-radius: 0 !important;
   background-color: #E4FDE1 !important;
-
 }
 
 
 .form-group{
   padding: 0 3% 0 3%;
+  margin-bottom: 6% !important;
 }
 
+.btn {
+  color: #E4FDE1 !important;
+}
 
 /* placeholder*/
 input {
-  font-family: 'Raleway', sans-serif !important;
+  /*font-family: 'Raleway', sans-serif !important;*/
   text-transform: uppercase;
 
 
@@ -61,7 +70,19 @@ input placeholder {
 }
 
 
+.col-md-8.valign {
+  padding-top: 2%;
+}
 
+.rate-title{
+  padding: 1% 0 0 0;
+}
+
+/* rating input */
+.rate {
+  margin-bottom: 3% !important;
+
+}
 
 button.form-control.btn.btn-default {
     background-color: #F45B69 !important;
