@@ -21,13 +21,13 @@
        </div>
 
       <!-- ratings  -->
-      <div class="form-group col-sm-12 col-md-12">
+      <div class="form-group col-md-12 rate" ng-repeat="rating in ratings">
         <div class="row">
-          <div class="col-md-6">
-            <span>MODULAR DEVELOPMENT</span>
+          <div class="col-md-8 valign">
+            <span class="rate-title">{{rating.name | uppercase}}:</span>
           </div>
-          <div class="col-md-6">
-            <input class="form-control" placeholder="8" id="" type="number" class="validate">
+          <div class="col-md-2 col-md-offset-2">
+            <input class="form-control" id="" type="number" ng-model="rating.rating" class="validate">
           </div>
         </div>
       </div>
