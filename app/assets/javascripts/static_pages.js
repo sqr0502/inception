@@ -7,16 +7,22 @@ var app = angular.module('inception', []);
 app.controller('formController', ['$scope', '$http', function($scope, $http){
   console.log('this works');
 
+  $scope.user = {};
+
   $scope.addUser = function(){
 
     $scope.user.ratings = $scope.ratings;
-
-    $http.post('/api/user', $scope.user).then(function(res){
-      if(res.status == 200){
-            console.log('sucessful');
-      }
-    })
+      if($scope.user.full_name && $scope.user.email && $scope.user.project_repo && $scope.user.project_url){
+        $http.post('/api/user', $scope.user).then(function(res){
+          if(res.status == 200){
+                console.log('sucessful');
+          }
+      });
+  }else{
+    $scope.invalid = true;
   }
+}
+
 
   $scope.ratings = [{
     name: "use best practices for OOP",
