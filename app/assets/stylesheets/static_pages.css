@@ -22,6 +22,10 @@ form {
   font-weight: 500;
 }
 
+.row .form {
+  margin-bottom: 3%;
+}
+
 
 .form-control{
   height: 45px !important;
