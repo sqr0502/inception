@@ -3,7 +3,7 @@
 
     <form class="form col-sm-12 col-md-6 col-md-offset-3">
       <div class="row">
-
+        <div ng-show="invalid">'Please complete the following fields: Full Name, Email, Project Repo, Project URL.'</div>
         <div class="form-group col-sm-12 col-md-12">
           <input ng-model="user.full_name" class="form-control" placeholder="full name" id="full_name" type="text" class="validate">
         </div>
@@ -23,10 +23,10 @@
       <!-- ratings  -->
       <div class="form-group col-md-12 rate" ng-repeat="rating in ratings">
         <div class="row">
-          <div class="col-md-8 valign">
+          <div class="col-xs-8 col-md-8 valign">
             <span class="rate-title">{{rating.name | uppercase}}:</span>
           </div>
-          <div class="col-md-2 col-md-offset-2">
+          <div class="col-xs-4 col-md-2 col-md-offset-2">
             <input class="form-control" id="" type="number" ng-model="rating.rating" class="validate">
           </div>
         </div>
