@@ -23,6 +23,11 @@ app.controller('formController', ['$scope', '$http', function($scope, $http){
   }
 }
 
+  $scope.tally = 0;
+  $scope.updateRating = function(rating){
+    $scope.tally += rating;
+  }
+
 
   $scope.ratings = [{
     name: "use best practices for OOP",
