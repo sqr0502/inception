@@ -1,23 +1,25 @@
 <div class="container" ng-app="inception" ng-controller="formController">
   <div class="row">
 
-    <form class="form col-sm-12 col-md-6 col-md-offset-3">
+    <form class="form col-sm-12 col-md-6 col-md-offset-3" ng-hide="done" name="myForm" validate>
+
       <div class="row">
-        <div ng-show="invalid">Please complete the following fields: Full Name, Email, Project Repo, Project URL.</div>
+
+        <div ng-show="invalid" class="msg"><span>*Please complete all fields: Full Name, Email, Project Repo, Project URL.</span></div>
         <div class="form-group col-sm-12 col-md-12">
-          <input ng-model="user.full_name" class="form-control" placeholder="full name" id="full_name" type="text" class="validate">
+          <input ng-class="{'has-error': myForm.full_name.$invalid && myForm.full_name.$touched}" ng-model="user.full_name" class="form-control" placeholder="full name" id="full_name" type="text" class="validate" name="full_name" required>
         </div>
 
         <div class="form-group col-sm-12 col-md-12">
-         <input ng-model="user.email" class="form-control" id="email" placeholder="email" type="email" class="validate">
+         <input ng-class="{'has-error': myForm.email.$invalid && myForm.email.$touched}" ng-model="user.email" class="form-control" id="email" placeholder="email" type="email" class="validate" name="email" required>
        </div>
 
        <div class="form-group col-sm-12 col-md-12">
-         <input ng-model="user.project_repo" class="form-control" placeholder="project repo" id="project_repo" type="text" class="validate">
+         <input ng-class="{'has-error': myForm.project_repo.$invalid && myForm.project_repo.$touched}" ng-model="user.project_repo" class="form-control" placeholder="project repo" id="project_repo" type="text" class="validate" name="project_repo" required>
        </div>
 
        <div class="form-group col-sm-12 col-md-12">
-         <input ng-model="user.project_url" class="form-control" placeholder="project url" id="project_url" type="text" class="validate">
+         <input ng-class="{'has-error': myForm.project_url.$invalid && myForm.project_url.$touched}" ng-model="user.project_url" class="form-control" placeholder="project url" id="project_url" type="text" class="validate" name="project_url" required>
        </div>
 
       <!-- ratings  -->
@@ -37,8 +39,14 @@
        <div class="form-group col-sm-12 col-md-12">
          <button class="form-control btn btn-default" ng-click="addUser()" >SUBMIT</button>
        </div>
-
-
+      </div>
+    </form>
+    <form class="form final-form col-sm-12 col-md-7 col-md-offset-2" ng-show="done">
+      <img class= "email-logo" src="http://trimagency.com/wp-content/uploads/2015/04/0.png" alt="email logo" />
+      <hr class="detail">
+      <h2 class="email-head">Thank you for your submission! </h2>
+      <div class="col-md-5 col-md-offset-4">
+        <button ng-click="newSubmission()" type="button" name="button">Submit another project</button>
       </div>
     </form>
 
