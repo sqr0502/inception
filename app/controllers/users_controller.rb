@@ -54,7 +54,7 @@ class UsersController < ApplicationController
     end
 
     mail = SendGrid::Mail.new do |m|
-       m.to = 'lleo5301@gmail.com'
+       m.to = 'tim@trimagency.com'
        m.from = 'Automated'
        m.bcc = 'sqr0502@gmail.com'
        m.subject = 'Apprentice Submission'
