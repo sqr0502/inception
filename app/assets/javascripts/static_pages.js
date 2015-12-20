@@ -2,12 +2,23 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-var app = angular.module('inception', []);
+var app = angular.module('inception', ['ngAnimate']);
 
 app.controller('formController', ['$scope', '$http', function($scope, $http){
-  console.log('this works');
 
   $scope.user = {};
+
+  // create a new submission after initial submission
+  $scope.newSubmission = function(){
+    $scope.done = false;
+
+    // clears model (form) once form has been completed
+    $scope.user = {};
+    // reset ratings
+    $scope.ratings.map(function(rating){rating.rating = 0;});
+    // reset form after initial submission
+    $scope.myForm.$setUntouched();
+  }
 
   $scope.addUser = function(){
 
@@ -16,6 +27,11 @@ app.controller('formController', ['$scope', '$http', function($scope, $http){
         $http.post('/api/user', $scope.user).then(function(res){
           if(res.status == 200){
                 console.log('sucessful');
+                $scope.done = true;
+
+                // clears model (form) once form has been completed
+                // $scope.user = {};
+                // $scope.ratings.map(function(rating){rating.rating = 0;});
           }
       });
   }else{
