@@ -15,11 +15,11 @@
        </div>
 
        <div class="form-group col-sm-12 col-md-12">
-         <input ng-class="{'has-error': myForm.project_repo.$invalid && myForm.project_repo.$touched}" ng-model="user.project_repo" class="form-control" placeholder="project repo" id="project_repo" type="text" class="validate" name="project_repo" required>
+         <input ng-class="{'has-error': myForm.project_repo.$invalid && myForm.project_repo.$touched}" ng-model="user.project_repo" class="form-control" placeholder="project repo" id="project_repo" type="text" class="validate" name="project_repo" ng-change="url('project_repo')" required>
        </div>
 
        <div class="form-group col-sm-12 col-md-12">
-         <input ng-class="{'has-error': myForm.project_url.$invalid && myForm.project_url.$touched}" ng-model="user.project_url" class="form-control" placeholder="project url" id="project_url" type="text" class="validate" name="project_url" required>
+         <input ng-class="{'has-error': myForm.project_url.$invalid && myForm.project_url.$touched}" ng-model="user.project_url" class="form-control" placeholder="project url" id="project_url" type="text" class="validate" name="project_url"  required>
        </div>
 
       <!-- ratings  -->
