@@ -26,6 +26,11 @@ form {
   margin-bottom: 3%;
 }
 
+.has-error{
+  color:white;
+  border: 1px solid red !important;
+}
+
 
 .form-control{
   height: 45px !important;
@@ -93,4 +98,104 @@ button.form-control.btn.btn-default {
     border-radius: 0 !important;
     border: none;
 
+}
+
+
+.email-head {
+  text-align: center;
+}
+
+.email-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.detail {
+  width: 150px;
+}
+
+.final-form {
+  padding-bottom: 3% !important;
+}
+
+/* thank you msg*/
+.msg {
+  text-align: center;
+}
+
+
+/* transition after form submission*/
+.ng-hide-add         {
+  -webkit-animation:0.5s lightSpeedOut ease;
+  animation:0.5s lightSpeedOut ease;
+}
+
+/* when showing the thing */
+.ng-hide-remove      {
+  -webkit-animation:0.5s fadeInUp ease;
+  animation:0.5s fadeInUp ease;
+}
+
+/* ANIMATIONS (FROM ANIMATE.CSS) */
+/*fade in up*/
+
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+/* light speed out */
+@-webkit-keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
 }
